@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CameraServiceKiller</string>
+    <string name="subtitle">Attempts to stop NoOpPrewarmService every 15 minutes</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+    <string name="status_stopped">Killer is stopped.</string>
+    <string name="status_running">Running - next stop attempt ~%1$s</string>
+</resources>
