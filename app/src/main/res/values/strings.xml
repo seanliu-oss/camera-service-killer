@@ -7,6 +7,9 @@
     <string name="status_stopped">Protection is stopped.</string>
     <string name="status_running">Foreground protection is active (15-minute loop).</string>
     <string name="debug_last_outcome">Last outcome: %1$s</string>
+    <string name="next_run_at">Next scheduled run: %1$s</string>
+    <string name="next_run_not_scheduled">Next scheduled run: not scheduled</string>
+    <string name="next_run_unavailable">Next scheduled run: calculating...</string>
     <string name="fg_notification_title">CameraServiceKiller is active</string>
     <string name="fg_notification_channel_name">Camera service protection</string>
 </resources>

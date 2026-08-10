@@ -25,6 +25,10 @@ public class WorkScheduler {
 
     private WorkScheduler() {}
 
+    public static long getIntervalMinutes() {
+        return INTERVAL_MINUTES;
+    }
+
     /**
      * Enqueues the periodic worker.  If a task with the same name already
      * exists it is kept as-is (KEEP policy) so reboots / re-installs do not
@@ -53,6 +57,3 @@ public class WorkScheduler {
         Log.i(TAG, "Scheduled " + WORK_NAME + " every " + INTERVAL_MINUTES + " minutes. replace=" + replace);
     }
 }
-
-
-
