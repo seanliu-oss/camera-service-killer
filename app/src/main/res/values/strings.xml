@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">CameraServiceKiller</string>
-    <string name="subtitle">Attempts to stop NoOpPrewarmService every 15 minutes</string>
-    <string name="btn_start">Start</string>
-    <string name="btn_stop">Stop</string>
-    <string name="status_stopped">Killer is stopped.</string>
-    <string name="status_running">Running - next stop attempt ~%1$s</string>
+    <string name="subtitle">Foreground mode attempts to stop NoOpPrewarmService every 15 minutes</string>
+    <string name="btn_start">Start Protection</string>
+    <string name="btn_stop">Stop Protection</string>
+    <string name="btn_test_now">Test Now</string>
+    <string name="status_stopped">Protection is stopped.</string>
+    <string name="status_running">Foreground protection is active (15-minute loop).</string>
+    <string name="debug_last_outcome">Last outcome: %1$s</string>
+    <string name="fg_notification_title">CameraServiceKiller is active</string>
+    <string name="fg_notification_channel_name">Camera service protection</string>
 </resources>

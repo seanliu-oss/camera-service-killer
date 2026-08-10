@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.util.Log;
 
 /**
- * Restores the periodic kill schedule after a device reboot or app update.
- * Declared in the manifest with RECEIVE_BOOT_COMPLETED and MY_PACKAGE_REPLACED.
+ * Restores scheduling and (if enabled) foreground reliability mode after reboot/update.
  */
 public class BootReceiver extends BroadcastReceiver {
 
@@ -16,9 +15,12 @@ public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-        Log.i(TAG, "Received: " + action + " – re-scheduling killer.");
-        // KEEP policy: don't reset the timer if work already exists.
+        Log.i(TAG, "Received: " + action + " - restoring killer state.");
+
         WorkScheduler.schedule(context, false);
+
+        if (KillerForegroundService.isEnabled(context)) {
+            KillerForegroundService.requestStart(context);
+        }
     }
 }
-
